@@ -1,4 +1,4 @@
-urllib3>=1.26.5
+urllib3>=2.2.2
 pandas
 numpy
 requests==2.25.0
