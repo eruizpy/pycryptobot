@@ -1,4 +1,4 @@
-FROM python:3.9-slim-bullseye AS compile-image
+FROM python:3.12.7-slim-bullseye AS compile-image
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get install --no-install-recommends -y \
@@ -20,7 +20,7 @@ RUN python -m pip install --no-cache-dir -U pip && \
 
 COPY . /app
 
-FROM python:3.9-slim-bullseye
+FROM python:3.12.7-slim-bullseye
 
 ARG REPO=whittlem/pycryptobot
 
